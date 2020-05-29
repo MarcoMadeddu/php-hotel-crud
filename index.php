@@ -5,6 +5,14 @@
 include __DIR__ . '/partials/templates/head.php';
 ?>
 
+<?php //allerts
+if(!empty($_GET['del'])){ $room= $_GET['del'];?>
+
+<div class="alert alert-success">
+    <span>Stanza <?php echo $room ?> cancellata con successo</span>
+</div>
+
+<?php } ?>
 
 <main class="container">
     <div class="row">
@@ -36,7 +44,14 @@ include __DIR__ . '/partials/templates/head.php';
                                 <a href="./show.php?id=<?php echo $room['id'];?>" class="text-success">View</a>
                             </td>
                             <td class="text-primary">Update</td>
-                            <td class="text-danger">Delete</td>
+                            <td class="text-danger">
+                                <form action="./partials/delete/server.php" method ="POST" >
+                                    <input type="hidden" name ="id" value = "<?php echo $room['id']?>">
+                                    <input type="hidden" name ="room_number" value = "<?php echo $room['room_number']; ?>">
+                                    <input class="btn btn-sm btn-danger" type ="submit" value="Delete">
+                                    
+                                </form>
+                            </td>
                         </tr>
                         <?php }
                     }
