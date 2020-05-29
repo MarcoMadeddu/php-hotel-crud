@@ -43,7 +43,11 @@ if(!empty($_GET['del'])){ $room= $_GET['del'];?>
                             <td>
                                 <a href="./show.php?id=<?php echo $room['id'];?>" class="text-success">View</a>
                             </td>
-                            <td class="text-primary">Update</td>
+
+                            <td class="text-primary">
+                                <a href="./edit.php?id=<?php echo $room['id'];?>" class="text-primary">Update</a>
+                            </td>
+
                             <td class="text-danger">
                                 <form action="./partials/delete/server.php" method ="POST" >
                                     <input type="hidden" name ="id" value = "<?php echo $room['id']?>">

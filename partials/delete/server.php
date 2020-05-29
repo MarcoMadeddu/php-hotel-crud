@@ -22,4 +22,6 @@ if($result && $affrows >0){
 }else{
     echo 'si è verificato un errore';
 }
+// Close connection 
+$conn->close();
 ?>
