@@ -44,4 +44,20 @@ return $record;
 $conn->close();
  
 }
+
+//DELETE RECORD
+function delete($conn , $table , $id , $url){
+    $sql = "DELETE FROM `$table` WHERE `id` = $id";
+    $result = $conn->query($sql);
+
+    $affrows=  $conn->affected_rows;
+    if($result && $affrows >0){
+     header("Location: $url");
+
+    }elseif($result){
+     echo 'nessuna stanza trovata';
+    }else{
+     echo 'si è verificato un errore';
+    }
+}
 ?>
