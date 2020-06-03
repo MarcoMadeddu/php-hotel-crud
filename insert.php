@@ -28,7 +28,6 @@ include __DIR__ . '/partials/templates/head.php';
                     <input type="number" class="form-control" name="floor" id="floor" placeholder="Add Florr">
                 </div>
                 <div class="form-group">
-                  <input type="hidden" name="id" value="">
                   <input class="btn btn-primary"type="submit" value="Create">
                 </div>
             </form>

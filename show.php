@@ -37,7 +37,7 @@ include __DIR__ . '/partials/templates/head.php';
                 </ul>
             </div>
             <button type="button" class="btn btn-primary">
-                <a class ="text-danger"href="<?php $base_path ?>edit.php?id=<?php echo $room['id'] ?>">&lt; Update</a>
+                <a class ="text-white"href="<?php $base_path ?>edit.php?id=<?php echo $room['id'] ?>">&lt; Update</a>
             </button>
             
             
