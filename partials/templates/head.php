@@ -14,12 +14,12 @@ include_once __DIR__ .'/../../env.php';
 
 <header class="main-header">
     <nav class="navbar navbar-dark bg-dark">
-        <a href="" class="navbar-brand">Boolean hotel</a>
+        <a href="<?php echo $base_path; ?> " class="navbar-brand">Boolean hotel</a>
 
         <ul class="navbar-nav">
             <li class="nav-item active">
                 <a href="<?php echo $base_path; ?> " class="nav-link">Home</a>
-                
+                <a href="<?php echo $base_path; ?>insert.php" class="nav-link">Create new room</a>
             </li>
         </ul>
     </nav>

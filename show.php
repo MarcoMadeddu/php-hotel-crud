@@ -28,10 +28,19 @@ include __DIR__ . '/partials/templates/head.php';
                     <li class="list-group-item">
                         FLOOR: <?php echo $room['floor'] ?>
                     </li>
-
+                    <li class="list-group-item">
+                        CREATED: <?php echo $room['created_at'] ?>
+                    </li>
+                    <li class="list-group-item">
+                        UPDATED: <?php echo $room['updated_at'] ?>
+                    </li>
                 </ul>
             </div>
-            <a href="./">&lt; back to archive</a>
+            <button type="button" class="btn btn-primary">
+                <a class ="text-danger"href="<?php $base_path ?>edit.php?id=<?php echo $room['id'] ?>">&lt; Update</a>
+            </button>
+            
+            
         </div>
     </div>
 </main>
